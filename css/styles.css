@@ -14,6 +14,8 @@
     --filter-buttons: #F5F4FA; 
     /* icons color */
     --icon-color: #AFB1B8;
+    /* anim */
+    --anim-speed: 250ms ease; 
 }
 
 body {
@@ -136,7 +138,7 @@ border-bottom: 1px solid var(--secondary-bg);
 }
 
 .nav-item {
-margin-right: 50px;
+    margin-right: 50px;
 }
 
 .logo {
@@ -157,6 +159,7 @@ margin-right: 50px;
 
 .nav-options {
     display: block;
+    position: relative;
     padding-top: 25px;
     padding-bottom: 25px;
     font-weight: 500;
@@ -164,6 +167,35 @@ margin-right: 50px;
     letter-spacing: 0.02em;
     color: var(--primary-text); 
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-hover-1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text);
+}
+
+.nav-hover-2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text);
 }
 
 .nav-current {
@@ -205,12 +237,18 @@ margin-right: 50px;
     letter-spacing: 0.02em;
     color: var(--secondary-text); 
     text-decoration: none; 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-icons {
     margin-bottom: -1px;
     fill: var(--secondary-text);
     fill: currentColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-info:hover,
@@ -224,7 +262,7 @@ margin-right: 50px;
 /* bg */
 .hero {
     background: var(--primary-bg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -342,6 +380,45 @@ margin-right: 50px;
     margin-right: 0;
 }
 
+.image-bg-1 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    top: 1425px;
+}
+
+.image-bg-2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    top: 1425px;
+}
+
+.image-bg-3 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    top: 1425px;
+}
+
+.bg-text {
+    font-weight: bold;
+        font-size: 14px;
+        line-height: calc(16/14);
+        text-transform: uppercase;
+        color: var(--header-bg);
+        background-color: rgba(47, 48, 58, 0.8);
+}
+
 .our-team-list {
     margin-top: 0;
     list-style: none;
@@ -405,6 +482,10 @@ margin-right: 50px;
     border-radius: 50%;
     fill: var(--icon-color);
     cursor: pointer;
+    transition-property: fill;
+    transition-property: background; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -432,11 +513,17 @@ margin-right: 50px;
     box-sizing: border-box;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-icons {
     display: block;
     fill: var(--icon-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .customers-box:hover .company-icons,
@@ -501,12 +588,15 @@ font-family: 'Raleway';
     margin-bottom: 10px;
     /* font */
     font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        text-decoration: none;
-        /* color */
-        color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    /* color */
+     color: rgba(255, 255, 255, 0.6);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-info:last-child {
@@ -548,6 +638,10 @@ font-family: 'Raleway';
     fill: var(--header-bg);
     background-color:rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transition-property: fill;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-link:hover,
@@ -565,7 +659,7 @@ font-family: 'Raleway';
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -641,6 +735,10 @@ font-family: 'Raleway';
     border: none;
     /* cursor */
     cursor: pointer;
+    transition-property: color;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .selection-button:hover,
@@ -672,6 +770,35 @@ font-family: 'Raleway';
     border-top: none;
 }
 
+.selection-box-overlay:hover .selection-description-text {
+    display: block;
+}
+
+.selection-box-overlay:hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 68.4%;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+
+
+.selection-description-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: calc(28/18);
+    color: var(--header-bg);
+}
+
 .selection-link {
     display: block;
 }
@@ -685,6 +812,7 @@ font-family: 'Raleway';
 
 .selection-item {
     margin-right: 30px;
+    position: relative;
 }
 
 .selection-item:nth-child(3n) {
