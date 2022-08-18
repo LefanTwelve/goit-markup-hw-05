@@ -115,6 +115,13 @@ address {
         overflow: hidden;
 }
 
+/* SVG's */
+.svg-action {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* header */
 .header {
 background-color: var(--header-bg);
@@ -482,7 +489,6 @@ border-bottom: 1px solid var(--secondary-bg);
     border-radius: 50%;
     fill: var(--icon-color);
     cursor: pointer;
-    transition-property: fill;
     transition-property: background; 
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -735,8 +741,7 @@ font-family: 'Raleway';
     border: none;
     /* cursor */
     cursor: pointer;
-    transition-property: color;
-    transition-property: background;
+    transition-property: color, background, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -773,6 +778,9 @@ font-family: 'Raleway';
 .selection-link {
     display: block;
     position: relative;
+    transition-property: boxshadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .selection-link:hover .portfolio-hover-text,
@@ -826,7 +834,7 @@ font-family: 'Raleway';
     color: var(--header-bg);
     transform: translateY(100%);
     background-color: rgba(33, 150, 243, 0.9);
-    transition-property: transform, boxshadow;
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
